@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<div>
+  UserName:<input type="text" [(ngModel)]="name" name="users" >&nbsp;
+  &nbsp;&nbsp;
+  <button type="submit" (click)="submit()" class="btn btn-primary" >submit</button>
+</div >
+<div *ngIf="isname">
+{{name}}
+</div>
+<ul>
+  <li *ngFor="let array of x " (mouseover)="onMouseOver(array)"  (mouseleave)="onmouseleave()"  >
+    {{array}} <button *ngIf="isShow" type="button" (click)="onEdit(array)">Edit</button> &nbsp;&nbsp;
+    <button *ngIf="isShow"  type="button" (click)="onDlt(array)">Delete</button>
+
+  </li>
+</ul><br>
+
