@@ -1,0 +1,22 @@
+<!-- <html>
+    <body> -->
+
+<mat-card *ngIf="isShow">
+    <h4><mat-card-title style="text-align: center;">Student login</mat-card-title></h4><br>
+<mat-card-content>
+    <label for="uname"[(ngModel)]="uname"name="uname"><b>Username</b></label>
+   <input type="text" placeholder="Enter Username"><br><br> 
+
+   <label for="uname" [(ngModel)]="password" name="password"><b>Password</b></label> 
+   <input type="password" placeholder="Enter Password"><br><br> <br>
+    
+    <button mat-raised-button  color="primary" routerLink="/register"(click)="login()">Login</button>
+</mat-card-content>
+
+</mat-card>
+
+
+<router-outlet></router-outlet>
+
+<!-- </body>
+</html> -->

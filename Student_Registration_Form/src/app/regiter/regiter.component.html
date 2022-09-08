@@ -1,0 +1,77 @@
+   <mat-card>
+    <h4><mat-card-title style="text-align: center;">Student Registration</mat-card-title></h4><br>
+   <div class="card">
+        <form [formGroup]="userForm">
+          <div class="mt-5 box">
+            <div class="form-row">
+              <div class="col-md-12">
+                <div class="form-group  mt-4">
+                  <label ><b>Student Name</b></label>
+                </div><br>
+                <div class="form-row" style="margin-top:-10px">
+                <div class="col">
+                  <input type="text" formControlName="Name" class="form-control" placeholder="Enter Name">
+                </div></div>
+              </div><br>
+      
+              <div class="col-md-12">
+                <div class="form-group mt-4">
+                  <label ><b>Student Email</b></label>
+                </div><br>
+                <div class="form-row" style="margin-top:-10px">
+                <div class="col">
+                  <input type="text" formControlName="Email" class="form-control" placeholder="Enter Email">
+                </div></div>
+              </div><br>
+      
+              <div class="col-md-12">
+                <div class="form-group  mt-4">
+                  <label ><b>Student MobileNumber</b></label>
+                </div><br>
+                <div class="form-row" style="margin-top:-10px">
+                <div class="col">
+                  <input type="text" formControlName="MobileNumber" class="form-control" placeholder="Enter Mobile Number">
+                </div></div>
+              </div><br>
+      
+              <div class="form-row-mt-4">
+                <div class="col-md-6">
+                    <button type="button" mat-raised-button  color="primary"class="btn btn-primary"(click)="addItem()">Add</button>&nbsp;
+                
+                    <button type="button"mat-raised-button  color="primary" class="btn btn-primary"(click)="Reset()">Reset</button>
+                </div>
+              </div><br>
+            
+      
+            </div>
+          </div>
+        
+        </form>
+    </div>
+  
+    </mat-card>
+    <br>
+        <div class="col-md-8 mt-4 mb-4">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>MobileNumber</th>
+                    </tr>
+      
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of listData">
+                        <td><span>{{item.Name}}</span></td>
+                        <td><span>{{item.Email}}</span></td>
+                        <td><span>{{item.MobileNumber}}</span></td>
+                        <td><button type="button" class="btn btn-primary"(click)="removeItem(item )">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+     
+      
+    
+   
